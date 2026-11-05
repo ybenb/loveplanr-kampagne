@@ -26,9 +26,7 @@ img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .list .block{position:absolute;inset:430px 0 0 0;padding:56px 68px;background:#fff6f3}.list h1{font-size:84px;margin-bottom:38px}
 .list ol{list-style:none;padding:0}.list li{font-size:42px;font-weight:500;display:flex;align-items:center;gap:30px;padding:17px 0;border-top:2px solid #e8d8d2}
 .list b{font:400 58px Didot,Georgia,serif;color:#db7f74;width:48px}.list .logo{position:absolute;left:68px;bottom:50px}
-.placeholder{background:#eee7e4}.frame{position:absolute;inset:56px;border:4px dashed #db7f74;padding:52px 56px}.badge{display:inline-block;background:#262626;color:#fff;font-size:30px;font-weight:600;letter-spacing:.14em;padding:14px 24px;margin-bottom:84px}
-.placeholder h1{font-size:74px;margin-bottom:24px}.placeholder .sub{color:#484848;font-size:34px}.badge{margin-bottom:36px}.slot{height:520px;margin-bottom:40px;border:3px solid #d9c9c3;background:#fff6f3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;padding:30px;font-size:34px;font-weight:500;color:#7a6a64}.slot .h{width:90px;height:81px;margin:0}
-.stamp{position:absolute;right:68px;bottom:44px;width:128px;height:128px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 68px Didot,Georgia,serif;background:#fff6f3;color:#262626;box-shadow:0 0 0 3px #fff6f3,0 0 0 6px #db7f74}.placeholder .logo{position:absolute;left:56px;bottom:62px}
+.stamp{position:absolute;right:68px;bottom:44px;width:128px;height:128px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 68px Didot,Georgia,serif;background:#fff6f3;color:#262626;box-shadow:0 0 0 3px #fff6f3,0 0 0 6px #db7f74}
 """
 def stamp(p): return '<div class="stamp">1×</div>' if p.get("stamp") else ""
 def body(p, photo):
@@ -40,7 +38,6 @@ def body(p, photo):
     if p["layout"] == "list":
         items = "".join(f"<li><b>{i}</b>{html.escape(s)}</li>" for i, s in enumerate(p["steps"], 1))
         return f'<body class="list"><div class="pic"><img src="{photo}" style="object-position:{p["pos"]}"></div><div class="block"><h1>{e(p["head"])}</h1><ol>{items}</ol>{LOGO}</div></body>'
-    return f'<body class="placeholder"><div class="frame"><span class="badge">PLATZHALTER</span><div class="slot">{HEART}<span>{e(p["slot"])}</span></div><h1>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p>{LOGO}</div></body>'
 def run(*a): subprocess.run(a, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 def main():
     OUT.mkdir(parents=True, exist_ok=True)

@@ -11,10 +11,10 @@ NEXT = {
     "01-einmal-ja": "Pakete vergleichen, dann kostenlos starten",
     "02-einmal-reicht": "Komplettpaket verstehen, dann kostenlos starten",
     "03-mehr-vorfreude": "Konto erstellen und die Seite kostenlos bauen",
-    "04-paar-geschichte": "Design-Beispiele ansehen, dann kostenlos starten",
-    "05-erstellt-mit": "Design-Beispiele ansehen, dann kostenlos starten",
-    "06-creator-video": "Funktionen ansehen, dann kostenlos starten",
-    "07-empfehlung": "Partner ansehen, Vertrauen aufbauen",
+    "04-eure-seite": "Design-Beispiele ansehen, dann kostenlos starten",
+    "05-so-kann-es-aussehen": "Design wählen, dann kostenlos starten",
+    "06-feierabend": "Funktionen ansehen, dann kostenlos starten",
+    "07-partner": "Partner ansehen, Vertrauen aufbauen",
     "08-gratis-checkliste": "E-Mail-Adresse angeben, Checkliste erhalten",
     "09-fuenf-schritte": "Die Schritte nachlesen, dann kostenlos starten",
     "10-rueckmeldungen": "Funktion verstehen, dann kostenlos starten",
@@ -30,8 +30,10 @@ def alt(p):
     bits = [plain(p["head"])]
     if p.get("sub"): bits.append(plain(p["sub"]))
     if p.get("steps"): bits.append(", ".join(p["steps"]))
-    prefix = "Pin-Platzhalter" if p["layout"] == "placeholder" else "Pin"
-    return f"{prefix} {p['id'][:2]}: " + " ".join(bits)
+    return f"Pin {p['id'][:2]}: " + " ".join(bits)
+
+def later(p):
+    return f"\n<p><strong>Später:</strong> {esc(p['later'])}</p>" if p.get("later") else ""
 
 def card(p):
     warn = f'<span class="warn">{esc(p["status"].split(":")[0])}</span>' if p["status"] else ""
@@ -42,14 +44,14 @@ def card(p):
 <details><summary>Beschreibung und Keywords</summary>
 <p>{esc(p['desc'])}</p>
 <p><strong>Keywords:</strong> {esc(p['kw'])}</p>
-<p><strong>Prinzip:</strong> {esc(p['principle'])}</p>
+<p><strong>Prinzip:</strong> {esc(p['principle'])}</p>{later(p)}
 </details>
 </article>"""
 
 def row(p):
     u = url(p)
     shown = u.replace("https://", "").replace("loveplanr.com", "", 1) if not "app." in u else u.replace("https://", "")
-    if p["status"] == "Platzhalter": state = '<span class="state-p">Platzhalter</span>'
+    if p["status"].startswith("Startfassung"): state = "Startfassung"
     elif p["status"]: state = '<span class="state-p">Vorschlag: neue Zielseite</span>'
     else: state = "Bereit"
     return (f'<tr><th scope="row">{p["id"][:2]} {esc(plain(p["head"]))}</th>'

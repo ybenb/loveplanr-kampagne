@@ -82,6 +82,11 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
 .b-hero .tag{color:#f0a79e}
 .b-hub{border-top-style:dashed}
 
+.b-img,.p-img{width:calc(100% + 2*clamp(1.3rem,3vw,2rem));max-width:none;margin:calc(-1*clamp(1.3rem,3vw,2rem)) calc(-1*clamp(1.3rem,3vw,2rem)) 1.2rem;aspect-ratio:3/2;object-fit:cover}
+.board{overflow:hidden}.persona{overflow:hidden}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--paper)}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
 /* Tabellen */
 .tbl{width:100%;border-collapse:collapse;font-size:.98rem;background:var(--paper)}
 .tbl th,.tbl td{text-align:left;vertical-align:top;padding:.8rem .9rem;border-bottom:1px solid var(--line)}
@@ -176,6 +181,8 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
   .reise{grid-template-columns:1fr 1fr}
   .reise li:last-child{grid-column:1/-1}
   .boards{grid-template-columns:1fr}
+  .strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+  .strip img{flex:0 0 62%;scroll-snap-align:start}
   .docs{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){

@@ -40,6 +40,8 @@ Team selbst, ohne KI. Es gehört nicht zu diesem Log.
 | 22 | «ich mache morgen weiter» | Keine Arbeit im Hintergrund. | – |
 | 23 | «let's go we are back» | Pins visuell geprüft und korrigiert, Website mit acht Bereichen gebaut, auf Desktop und Handy geprüft, Dokumentation geschrieben, veröffentlicht. | dieser Commit |
 
+| 24 | «[12 Fotos] Hier hat es noch mehr fotos, du hast zu viele Placeholder verwendet» | Die vier Hub-Pins neu geschrieben und mit den neuen Fotos gestaltet. Sie behaupten nichts über Kunden und laufen als Startfassung, bis echtes Material vorliegt. Pins 09 und 10 mit passenderen Fotos, neue Fotos auf der Website bei Boards, Personas und in einem Bildstreifen. | dieser Commit |
+
 Die Prompts 20 bis 23 gehören zur selben Iteration, weil der Bau über Nacht unterbrochen wurde. Darum gibt es dafür einen gemeinsamen Commit.
 
 ## Was der Prompt 20 offenliess
@@ -47,7 +49,7 @@ Die Prompts 20 bis 23 gehören zur selben Iteration, weil der Bau über Nacht un
 «Sei kreativ» legte die Idee nicht fest. Diese Entscheide traf die KI selbst. Das Team sollte sie prüfen:
 
 - Leitidee «Einmal reicht.» mit dem Motiv 1×, aus dem USP «einmaliger Preis» abgeleitet.
-- Hub-Pins bleiben sichtbare Platzhalter, statt Stock-Fotos als Paargeschichten auszugeben.
+- Hub-Pins waren zuerst sichtbare Platzhalter, damit Stock-Fotos nicht als Paargeschichten erscheinen. Der Nutzer korrigierte das mit Prompt 24: Sie sind nun gestaltete Startfassungen ohne Kundenaussage.
 - Help-Pins erscheinen im Kalender vor den Hero-Pins.
 - Der Promoted-Test vergleicht Preis gegen Hilfe, mit einer Nachfrist von vier Wochen für den Kauf. Die Nachfrist ist ein Vorschlag, kein Erfahrungswert.
 - Die Geschichte «Ein Abend im Planungsfenster» ordnet die KPIs den Schritten eines fiktiven Paars zu.

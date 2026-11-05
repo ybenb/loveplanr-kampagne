@@ -48,6 +48,11 @@ Die Masse und Textlängen der ersten Pins bestanden die automatische Prüfung. D
 - **Bemerkt:** Die KI selbst, beim Durchlesen der gerenderten Seite.
 - **Korrektur:** Titel neutral formuliert, im Text steht nun: sieben fertig, vier Platzhalter, einer wartet auf seine Zielseite.
 
+### 9. Zu viele Platzhalter
+- **Output:** Vier von zwölf Pins waren leere Rahmen mit Text wie «[Paar]» und «[Creatorin]». Die KI las die Regel «keine erfundenen Testimonials» so, dass ohne echtes Material gar kein gestalteter Pin möglich sei.
+- **Bemerkt:** Der Nutzer: «du hast zu viele Placeholder verwendet».
+- **Korrektur:** Die Regel betrifft die Aussage, nicht die Gestaltung. Die Pins zeigen nun Stock-Fotos mit Texten, die nichts über Kunden behaupten, zum Beispiel «So kann eure Hochzeitsseite aussehen». Echte Geschichten ersetzen sie später. Die Website sagt offen, dass Social Proof, Authority und Liking erst mit echtem Material wirken.
+
 ## B. Korrekturen an den Vorgaben (keine KI-Fehler)
 
 Beim Abgleich mit loveplanr.com und der Hilfe von Pinterest zeigten sich Abweichungen in der ursprünglichen Projektvorgabe:

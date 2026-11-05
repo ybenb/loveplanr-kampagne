@@ -4,7 +4,7 @@ Aufruf: python3 tools/make_pins.py  (braucht assets/originals/, Chrome und macOS
 import csv, html, pathlib, shutil, subprocess, sys, tempfile
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from pins_data import PINS, pin_url
+from pins_data import PINS, PRINZIP, pin_url
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ORIG, OUT = ROOT / "assets/originals", ROOT / "assets/pins"
 HEART = '<svg class="h" viewBox="0 0 32 29" aria-hidden="true"><path fill="currentColor" d="M16 29S0 19 0 8.5C0 3.7 3.7 0 8.3 0 11.4 0 14.3 1.7 16 4.4 17.7 1.7 20.6 0 23.7 0 28.3 0 32 3.7 32 8.5 32 19 16 29 16 29z"/></svg>'
@@ -27,19 +27,19 @@ img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .list ol{list-style:none;padding:0}.list li{font-size:42px;font-weight:500;display:flex;align-items:center;gap:30px;padding:17px 0;border-top:2px solid #e8d8d2}
 .list b{font:400 58px Didot,Georgia,serif;color:#db7f74;width:48px}.list .logo{position:absolute;left:68px;bottom:50px}
 .proof{display:inline-block;background:#fff6f3;color:#262626;font-size:32px;font-weight:600;padding:10px 20px;margin-bottom:26px}
-.sym{position:absolute;top:36px;right:36px;font-size:24px;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(25,18,16,.6);padding:7px 14px}
+.sym{position:absolute;top:30px;right:30px;font-size:23px;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(25,18,16,.6);padding:7px 14px}
 .stamp{position:absolute;right:68px;bottom:44px;width:128px;height:128px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 68px Didot,Georgia,serif;background:#fff6f3;color:#262626;box-shadow:0 0 0 3px #fff6f3,0 0 0 6px #db7f74}
 """
 def stamp(p): return '<div class="stamp">1×</div>' if p.get("stamp") else ""
 def proof(p): return f'<p class="proof">{p["proof"]}</p>' if p.get("proof") else ""
-def sym(p): return '<div class="sym">Symbolbild</div>' if p.get("symbol") else ""
+def sym(p): return f'<div class="sym">{p["note"]}</div>' if p.get("note") else ""
 def hs(p): return f' style="font-size:{p["hsize"]}px;line-height:1.14"' if p.get("hsize") else ""
 def body(p, photo):
     e = lambda s: s  # Inhalte stammen aus pins_data.py und enthalten bewusst <br>
     if p["layout"] == "photo":
         return f'<body class="photo {p["place"]}"><img class="bg" src="{photo}" style="object-position:{p["pos"]}"><div class="shade"></div><div class="txt">{proof(p)}<h1{hs(p)}>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p></div>{LOGO}{stamp(p)}{sym(p)}</body>'
     if p["layout"] == "split":
-        return f'<body class="split {p["color"]}"><div class="pic"><img src="{photo}" style="object-position:{p["pos"]}"></div><div class="block"><h1>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p>{LOGO}{stamp(p)}</div></body>'
+        return f'<body class="split {p["color"]}"><div class="pic"><img src="{photo}" style="object-position:{p["pos"]}"></div><div class="block"><h1{hs(p)}>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p>{LOGO}{stamp(p)}</div>{sym(p)}</body>'
     if p["layout"] == "list":
         items = "".join(f"<li><b>{i}</b>{html.escape(s)}</li>" for i, s in enumerate(p["steps"], 1))
         return f'<body class="list"><div class="pic"><img src="{photo}" style="object-position:{p["pos"]}"></div><div class="block"><h1>{e(p["head"])}</h1><ol>{items}</ol>{LOGO}</div></body>'
@@ -61,7 +61,7 @@ def main():
         run("sips", "-z", "750", "500", "-s", "format", "jpeg", "-s", "formatOptions", "74", str(png), "--out", str(OUT / f'{p["id"]}-500.jpg'))
     with open(OUT / "pin-set.csv", "w", newline="", encoding="utf-8-sig") as c:
         w = csv.writer(c, delimiter=";")
-        w.writerow(["Datei", "Board", "Titel", "Beschreibung", "Keywords", "Ziel-URL mit UTM", "Prinzip", "Status"])
-        for p in PINS: w.writerow([p["id"] + ".jpg", p["board"], p["title"], p["desc"], p["kw"], pin_url(p), p["principle"], p["status"] or "bereit"])
+        w.writerow(["Datei", "Board", "Titel", "Beschreibung", "Keywords", "Ziel-URL mit UTM", "Prinzip → Element", "Status"])
+        for p in PINS: w.writerow([p["id"] + ".jpg", p["board"], p["title"], p["desc"], p["kw"], pin_url(p), " → ".join(PRINZIP[p["id"]]), p["status"] or "bereit"])
     shutil.rmtree(tmp, ignore_errors=True)
 if __name__ == "__main__": main()

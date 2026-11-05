@@ -20,18 +20,19 @@
 
 - Planungsfenster 6 bis 12 Monate vor der Hochzeit, Personas, Keyword-Auswahl.
 - Der bisherige Social-Media-Auftritt setzt auf Humor (Einschätzung des Teams).
-- Zielwert Kosten pro Kunde ≤ 20–30 CHF (für die Website freigegeben). Weitere Zahlen aus dem Businessplan bleiben privat.
+- Zielwert Kosten pro Kunde ≤ 25 CHF, Stopp über 30 CHF (vom Team festgelegt in Prompt 27). Weitere Zahlen aus dem Businessplan bleiben privat.
 - Die Schweiz als Werbemarkt stammt aus einer älteren Pinterest-Hilfeseite und ist im Ads Manager zu prüfen.
 
 ## Zitate auf den Pins
 
-Alle Zitate stammen wörtlich von https://loveplanr.com/ und https://loveplanr.com/hochzeitswebsite/ (abgerufen am 05.11.2026). Der Nutzer hat ihre Verwendung freigegeben. Offen bleibt, ob die Gründer und die Paare auch dem Einsatz auf Pinterest zustimmen. Das ist vor dem Hochladen zu klären. Die Stock-Fotos zeigen nicht diese Paare und tragen darum den Hinweis «Symbolbild».
+Alle Zitate stammen wörtlich von https://loveplanr.com/ und https://loveplanr.com/hochzeitswebsite/ (abgerufen am 05.11.2026). Der Nutzer hat ihre Verwendung für das Projekt freigegeben. Einheitlicher Stand: «Freigabe für Pinterest offen». Am Pin steht: «Zitat von loveplanr.com, Foto: Stock, zeigt nicht das Paar».
 
 | Pin | Zitat | Paar |
 |---|---|---|
 | 04 | «Besonders praktisch war, dass wir unsere Gäste nicht nochmals für den Sitzplan erfassen mussten.» | Melek & Rafael |
 | 05 | «Die Webseite war super schnell erstellt und unsere Gäste hatten alle wichtigen Informationen an einem Ort.» | Aline & Josia |
 | 06 | «Wir hatten Gästeliste, Sitzplan und Einladungen endlich an einem Ort.» | Sabine & Markus |
+| 13 | «Unsere Gäste konnten direkt über die Webseite zusagen und wir hatten alle Rückmeldungen sofort übersichtlich in unserer Gästeliste.» | Sabine & Markus |
 
 ## Nutzerzahl auf Pin 02
 
@@ -55,4 +56,4 @@ Alle Zitate stammen wörtlich von https://loveplanr.com/ und https://loveplanr.c
 
 ## Fotos
 
-Stock-Motive, über Envato lizenziert. Originale liegen nur lokal, ins Repo kommen verkleinerte Versionen. Sie zeigen keine Kundenpaare. Pins mit Zitaten tragen den Hinweis «Symbolbild». Auf der Website gehören die Personas-Bilder zu fiktiven Personas.
+Stock-Motive, über Envato lizenziert. Originale liegen nur lokal, ins Repo kommen verkleinerte Versionen. Sie zeigen keine Kundenpaare. Pins mit Zitaten tragen den Hinweis direkt im Bild. Auf der Website gehören die Personas-Bilder zu fiktiven Personas.

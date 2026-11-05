@@ -53,6 +53,15 @@ Die Masse und Textlängen der ersten Pins bestanden die automatische Prüfung. D
 - **Bemerkt:** Der Nutzer: «du hast zu viele Placeholder verwendet».
 - **Korrektur:** Die Regel betrifft die Aussage, nicht die Gestaltung. Die Pins zeigen nun Stock-Fotos mit Texten, die nichts über Kunden behaupten, zum Beispiel «So kann eure Hochzeitsseite aussehen». Echte Geschichten ersetzen sie später. Mit dem nächsten Prompt erlaubte der Nutzer Kundenaussagen. Die KI übernahm echte Zitate von loveplanr.com statt welche zu formulieren und markierte die Fotos als «Symbolbild», weil sie nicht diese Paare zeigen. Der erste Umbau zu Pins ohne Kundenaussage war also nur ein Zwischenschritt: Die KI hätte die vorhandenen Zitate schon vorher zur Entscheidung vorlegen können.
 
+### 10. Widersprüche über mehrere Bereiche
+Die Prüfung nach der Rubric des Dozenten zeigte Fehler, die beim Bau jedes einzelnen Bereichs nicht auffielen:
+- **Pin 08:** In den Boards, der Pin-Tabelle und im Kalender stand er unterschiedlich: «bereit», «Vorschlag», und trotz fehlender Zielseite in Woche 5 eingeplant. Korrektur: ein einziger Status, nicht im Kalender, Pin 13 als Ersatz.
+- **Zielwert und Stoppregel passten nicht zusammen:** «≤ 20–30 CHF» gegen «Stopp über 30 CHF». Korrektur: Ziel ≤ 25 CHF, Stopp über 30 CHF.
+- **Kosten pro Kunde** hing im Funnel am kostenlosen Start, obwohl die Kennzahl erst beim Kauf entsteht. Korrektur: eigener Schritt «Sie kaufen».
+- **«12963Hochzeit»:** Die Zeitskala bestand aus Elementen ohne Leerraum. Im Browser sah das korrekt aus, im extrahierten Text standen die Zahlen zusammen. Die visuelle Prüfung konnte das nicht zeigen. Korrektur: echte Liste mit vollen Beschriftungen.
+- **Begriffe gemischt:** «Hochzeitswebseite», «Hochzeitswebsite» und «Hochzeitsseite» standen nebeneinander. Korrektur: «Hochzeitswebseite», wie Loveplanr.
+- **Bemerkt:** durch den Nutzer in Prompt 27. Die KI hatte Bereiche einzeln geprüft, nie einen Wert quer über alle Bereiche.
+
 ## B. Korrekturen an den Vorgaben (keine KI-Fehler)
 
 Beim Abgleich mit loveplanr.com und der Hilfe von Pinterest zeigten sich Abweichungen in der ursprünglichen Projektvorgabe:

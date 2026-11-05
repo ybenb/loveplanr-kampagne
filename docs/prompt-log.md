@@ -43,7 +43,8 @@ Team selbst, ohne KI. Es gehört nicht zu diesem Log.
 | 24 | «[12 Fotos] Hier hat es noch mehr fotos, du hast zu viele Placeholder verwendet» | Die vier Hub-Pins neu geschrieben und mit den neuen Fotos gestaltet. Sie behaupten nichts über Kunden und laufen als Startfassung, bis echtes Material vorliegt. Pins 09 und 10 mit passenderen Fotos, neue Fotos auf der Website bei Boards, Personas und in einem Bildstreifen. | `d007ae1` |
 
 | 25 | «ass sie ohne Kundenaussage funktionieren und mit de, du darfst auch kundenaussagen daraufpacken.» (nimmt Bezug auf eine Zwischennachricht der KI) | Echte Zitate wörtlich von loveplanr.com geholt und auf die Pins 04, 05 und 06 gesetzt, Fotos dort als «Symbolbild» markiert. Die Zitate stehen auch im Bereich 8 der Website. | `e425332` |
-| 26 | «Die AUssage darf auf dem Pin platziert werden.» (Antwort auf die Rückfrage der KI zu «Bereits von 10’000+ Hochzeitspaaren genutzt») | Aussage wörtlich auf Pin 02 und in dessen Beschreibung gesetzt. Nicht auf Pin 01, weil dieser im Promoted-Test gegen Pin 09 läuft und nur die Botschaft Preis oder Hilfe vergleichen soll. | dieser Commit |
+| 26 | «Die AUssage darf auf dem Pin platziert werden.» (Antwort auf die Rückfrage der KI zu «Bereits von 10’000+ Hochzeitspaaren genutzt») | Aussage wörtlich auf Pin 02 und in dessen Beschreibung gesetzt. Nicht auf Pin 01, weil dieser im Promoted-Test gegen Pin 09 läuft und nur die Botschaft Preis oder Hilfe vergleichen soll. | `41820a5` |
+| 27 | Rollen-Prompt «Senior-Kampagnendesigner», Wortlaut unten | Widersprüche behoben, Pins ins Zentrum, Prozess auf Unterseite. Siehe Iteration 5 unten. | dieser Commit |
 
 Die Prompts 20 bis 23 gehören zur selben Iteration, weil der Bau über Nacht unterbrochen wurde. Darum gibt es dafür einen gemeinsamen Commit.
 
@@ -56,3 +57,70 @@ Die Prompts 20 bis 23 gehören zur selben Iteration, weil der Bau über Nacht un
 - Help-Pins erscheinen im Kalender vor den Hero-Pins.
 - Der Promoted-Test vergleicht Preis gegen Hilfe, mit einer Nachfrist von vier Wochen für den Kauf. Die Nachfrist ist ein Vorschlag, kein Erfahrungswert.
 - Die Geschichte «Ein Abend im Planungsfenster» ordnet die KPIs den Schritten eines fiktiven Paars zu.
+
+## Iteration 5: Prompt 27 im Wortlaut
+
+```
+Rolle: Du bist Senior-Kampagnendesigner und UX-Writer für Social-Media-Kampagnen
+im Schweizer Hochzeitsmarkt.
+
+Kontext: Lies CLAUDE.md und den aktuellen Stand der Website. Die Seite wird von
+unserem Dozenten nach dieser Rubric bewertet: (a) Professionalität und
+Ausführungsqualität im Vergleich zu professionellen Standards, (b) die
+Verhaltensprinzipien sind im Artefakt an konkreten Elementen erkennbar.
+
+Aufgabe – in dieser Reihenfolge:
+
+1. Widersprüche beheben:
+   - Pin 08: ein einziger Status überall (Boards, Pin-Tabelle, Kalender, Test).
+     Solange die Landingpage fehlt, raus aus Kalender und Test, Ersatz-Pin
+     für Woche 5 vorschlagen.
+   - Zielwert Kosten pro Kunde und Stoppregel angleichen (Ziel ≤ 25 CHF,
+     Stopp > 30 CHF – oder begründet anders, aber konsistent).
+   - KPI „Kosten pro Kunde“ dem Kauf-Schritt im Funnel zuordnen.
+   - Darstellungsfehler „12963Hochzeit“ in der Ausgangslage finden und beheben.
+   - Einheitlich den Begriff verwenden, den loveplanr.com selbst nutzt
+     (Hochzeitswebsite oder Hochzeitswebseite).
+   - Zitate: Freigabestatus konsistent; direkt am Pin vermerken
+     „Zitat von loveplanr.com, Foto: Stock, zeigt nicht das Paar“.
+
+2. Wirkung als Kampagne erhöhen:
+   - Ganz oben eine Zusammenfassung, in 30 Sekunden lesbar:
+     Bottleneck → warum Pinterest → Kampagnenidee → 3 Kern-KPIs.
+   - Die 12 Pins als Herzstück: Masonry-Raster wie in einem Pinterest-Feed,
+     plus ein Mockup „So erscheint Pin 09 bei der Suche
+     ‚Hochzeitswebsite erstellen‘“ (klar als Mockup beschriftet, kein
+     Pinterest-Logo).
+   - Bei jedem Pin ein Prinzip-Label, das auf das konkrete Element zeigt,
+     z. B. „Reciprocity → CTA ‚Checkliste gratis‘“.
+   - Status-Labels, offene Punkte, Prompt-Log und AI-Fehler auf eine
+     Unterseite /prozess verschieben; auf der Hauptseite nur ein Link dorthin.
+   - Englische Fachbegriffe beim ersten Vorkommen kurz auf Deutsch erklären.
+
+3. Qualität prüfen:
+   - Mobile bei 390 px und Desktop bei 1280 px mit Playwright screenshoten,
+     Layoutfehler beheben.
+   - Lighthouse: Accessibility und Performance ≥ 90; Bilder als WebP,
+     sinnvolle Alt-Texte.
+   - Alle internen Links und den CSV-Download testen.
+
+Einschränkungen:
+- Keine neuen Zahlen, Statistiken oder Testimonials erfinden. Was fehlt,
+  bleibt als offener Punkt auf /prozess.
+- Schweizer Rechtschreibung (kein ß), Preise in CHF.
+- Inhalte der Gründer (Preise, Zitate) nicht umformulieren.
+- Vor dem Löschen ganzer Abschnitte zuerst fragen.
+
+Output: Kurze Liste der Änderungen pro Punkt, Vorher/Nachher-Screenshots in
+docs/iterationen/, dann committen als
+„Iteration N: Widersprüche behoben, Pins ins Zentrum, Prozess auf Unterseite“.
+```
+
+Entscheide der KI in Iteration 5, die das Team prüfen sollte:
+
+- **Begriff:** Auf den acht geprüften Seiten von loveplanr.com steht 114-mal «Hochzeitswebseite» und 6-mal «Hochzeitswebsite». Darum heisst auch die Suche im Mockup «Hochzeitswebseite erstellen», nicht wie im Prompt «Hochzeitswebsite erstellen». Die zweite Schreibweise bleibt nur als Keyword-Variante.
+- **Ersatz-Pin für Woche 5:** neuer Pin 13 mit einem weiteren echten Zitat von Sabine & Markus. So bleiben es zwölf einplanbare Pins, Pin 08 steht separat als Vorschlag.
+- **Ein Status bleibt auf der Hauptseite:** Pin 08 trägt dort «Vorschlag: neue Zielseite nötig». Die Vorgaben verlangen diese Kennzeichnung, und ohne sie wäre die Hauptseite irreführend. Alle anderen Status stehen nur auf der Unterseite Prozess.
+- **Zielwert:** ≤ 25 CHF und Stopp über 30 CHF wie im Prompt. Dazwischen wird beobachtet. Die Hauptseite nennt die frühere Spanne nicht mehr.
+- **Abschnitte:** Keiner wurde gelöscht. Verschoben wurden der Prozess-Bereich und die Hinweise «Noch zu prüfen» und «Die fehlende Seite» auf die Unterseite Prozess.
+

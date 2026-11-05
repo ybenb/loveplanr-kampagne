@@ -8,5 +8,6 @@ Live: https://löve.ch
 - `assets/pins/`: zwölf Pins (1000 × 1500 px), Vorschauen und `pin-set.csv`
 - `tools/pins_data.py`: Texte aller Pins, eine Quelle für Bilder, CSV und Website
 - `tools/make_pins.py`: rendert die Pins, braucht die lokalen Originalfotos, Chrome und macOS
-- `tools/build_site.py`: schreibt Pin-Karten und Funnel-Tabelle in `index.html`
-- `docs/`: Prompt-Log, AI-Fehler, Quellen und Platzhalter
+- `tools/make_webp.cjs`: wandelt Website-Bilder in WebP um, braucht das npm-Paket `sharp`
+- `tools/build_site.py`: schreibt Pin-Karten, Mockup und Funnel-Tabelle in `index.html` und erzeugt `prozess/index.html` aus `docs/`
+- `docs/`: Prompt-Log, AI-Fehler, offene Punkte, Quellen, Screenshots der Iterationen (auch sichtbar auf `/prozess/`)

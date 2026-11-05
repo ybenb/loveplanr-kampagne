@@ -51,7 +51,7 @@ Die Masse und Textlängen der ersten Pins bestanden die automatische Prüfung. D
 ### 9. Zu viele Platzhalter
 - **Output:** Vier von zwölf Pins waren leere Rahmen mit Text wie «[Paar]» und «[Creatorin]». Die KI las die Regel «keine erfundenen Testimonials» so, dass ohne echtes Material gar kein gestalteter Pin möglich sei.
 - **Bemerkt:** Der Nutzer: «du hast zu viele Placeholder verwendet».
-- **Korrektur:** Die Regel betrifft die Aussage, nicht die Gestaltung. Die Pins zeigen nun Stock-Fotos mit Texten, die nichts über Kunden behaupten, zum Beispiel «So kann eure Hochzeitsseite aussehen». Echte Geschichten ersetzen sie später. Die Website sagt offen, dass Social Proof, Authority und Liking erst mit echtem Material wirken.
+- **Korrektur:** Die Regel betrifft die Aussage, nicht die Gestaltung. Die Pins zeigen nun Stock-Fotos mit Texten, die nichts über Kunden behaupten, zum Beispiel «So kann eure Hochzeitsseite aussehen». Echte Geschichten ersetzen sie später. Mit dem nächsten Prompt erlaubte der Nutzer Kundenaussagen. Die KI übernahm echte Zitate von loveplanr.com statt welche zu formulieren und markierte die Fotos als «Symbolbild», weil sie nicht diese Paare zeigen. Der erste Umbau zu Pins ohne Kundenaussage war also nur ein Zwischenschritt: Die KI hätte die vorhandenen Zitate schon vorher zur Entscheidung vorlegen können.
 
 ## B. Korrekturen an den Vorgaben (keine KI-Fehler)
 

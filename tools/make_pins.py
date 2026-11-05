@@ -16,7 +16,7 @@ h1{font-family:Didot,"Bodoni 72",Georgia,serif;font-weight:400;line-height:1.04;
 .sub{font-size:39px;line-height:1.28;font-weight:500}
 img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .photo .shade{position:absolute;inset:0}.photo.top .shade{background:linear-gradient(180deg,rgba(25,18,16,.68),rgba(25,18,16,.12) 52%,rgba(25,18,16,.5))}
-.photo.bottom .shade{background:linear-gradient(0deg,rgba(25,18,16,.86),rgba(25,18,16,.5) 34%,rgba(25,18,16,0) 62%)}
+.photo.bottom .shade{background:linear-gradient(0deg,rgba(25,18,16,.88),rgba(25,18,16,.62) 42%,rgba(25,18,16,0) 70%)}
 .photo .txt{position:absolute;left:68px;right:68px;color:#fff}.photo.top .txt{top:90px}.photo.bottom .txt{bottom:150px}
 .photo h1{font-size:112px;margin-bottom:28px}.photo .logo{position:absolute;left:68px;bottom:62px;color:#fff}.photo .h{color:#f0a79e}
 .split .pic{position:absolute;inset:0 0 auto 0;height:840px;overflow:hidden}.split .pic img{width:100%;height:100%;object-fit:cover;display:block}
@@ -26,13 +26,16 @@ img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .list .block{position:absolute;inset:430px 0 0 0;padding:56px 68px;background:#fff6f3}.list h1{font-size:84px;margin-bottom:38px}
 .list ol{list-style:none;padding:0}.list li{font-size:42px;font-weight:500;display:flex;align-items:center;gap:30px;padding:17px 0;border-top:2px solid #e8d8d2}
 .list b{font:400 58px Didot,Georgia,serif;color:#db7f74;width:48px}.list .logo{position:absolute;left:68px;bottom:50px}
+.sym{position:absolute;top:36px;right:36px;font-size:24px;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(25,18,16,.6);padding:7px 14px}
 .stamp{position:absolute;right:68px;bottom:44px;width:128px;height:128px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 68px Didot,Georgia,serif;background:#fff6f3;color:#262626;box-shadow:0 0 0 3px #fff6f3,0 0 0 6px #db7f74}
 """
 def stamp(p): return '<div class="stamp">1×</div>' if p.get("stamp") else ""
+def sym(p): return '<div class="sym">Symbolbild</div>' if p.get("symbol") else ""
+def hs(p): return f' style="font-size:{p["hsize"]}px;line-height:1.14"' if p.get("hsize") else ""
 def body(p, photo):
     e = lambda s: s  # Inhalte stammen aus pins_data.py und enthalten bewusst <br>
     if p["layout"] == "photo":
-        return f'<body class="photo {p["place"]}"><img class="bg" src="{photo}" style="object-position:{p["pos"]}"><div class="shade"></div><div class="txt"><h1>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p></div>{LOGO}{stamp(p)}</body>'
+        return f'<body class="photo {p["place"]}"><img class="bg" src="{photo}" style="object-position:{p["pos"]}"><div class="shade"></div><div class="txt"><h1{hs(p)}>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p></div>{LOGO}{stamp(p)}{sym(p)}</body>'
     if p["layout"] == "split":
         return f'<body class="split {p["color"]}"><div class="pic"><img src="{photo}" style="object-position:{p["pos"]}"></div><div class="block"><h1>{e(p["head"])}</h1><p class="sub">{e(p["sub"])}</p>{LOGO}{stamp(p)}</div></body>'
     if p["layout"] == "list":

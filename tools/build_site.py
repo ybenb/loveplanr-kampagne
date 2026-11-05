@@ -11,8 +11,8 @@ NEXT = {
     "01-einmal-ja": "Pakete vergleichen, dann kostenlos starten",
     "02-einmal-reicht": "Komplettpaket verstehen, dann kostenlos starten",
     "03-mehr-vorfreude": "Konto erstellen und die Seite kostenlos bauen",
-    "04-eure-seite": "Design-Beispiele ansehen, dann kostenlos starten",
-    "05-so-kann-es-aussehen": "Design wählen, dann kostenlos starten",
+    "04-melek-rafael": "Sitzplan verstehen, Komplettpaket prüfen",
+    "05-aline-josia": "Funktionen ansehen, dann kostenlos starten",
     "06-feierabend": "Funktionen ansehen, dann kostenlos starten",
     "07-partner": "Partner ansehen, Vertrauen aufbauen",
     "08-gratis-checkliste": "E-Mail-Adresse angeben, Checkliste erhalten",
@@ -52,6 +52,7 @@ def row(p):
     u = url(p)
     shown = u.replace("https://", "").replace("loveplanr.com", "", 1) if not "app." in u else u.replace("https://", "")
     if p["status"].startswith("Startfassung"): state = "Startfassung"
+    elif p["status"].startswith("Freigabe"): state = '<span class="state-p">Zitat: Freigabe offen</span>'
     elif p["status"]: state = '<span class="state-p">Vorschlag: neue Zielseite</span>'
     else: state = "Bereit"
     return (f'<tr><th scope="row">{p["id"][:2]} {esc(plain(p["head"]))}</th>'

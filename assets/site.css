@@ -152,6 +152,12 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
 .prinz h3{font-size:1.5rem}
 .prinz p{font-size:.97rem;margin-bottom:.6rem}
 .wo{font-weight:600;font-size:.86rem!important;color:var(--rose-d);margin:0!important}
+.stimmen{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:clamp(2rem,4vw,3rem)}
+.stimmen h3,.stimmen .quelle{grid-column:1/-1;margin:0}
+.stimmen .quelle{font-size:.9rem;color:var(--muted)}
+.stimmen blockquote{margin:0;padding:1.3rem;background:var(--ink);color:var(--paper)}
+.stimmen blockquote p{font:400 1.32rem/1.28 var(--serif);margin-bottom:.8rem}
+.stimmen footer{font-size:.9rem;font-weight:600;color:#f0a79e}
 .nein{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.2rem}
 .nein article{padding:1.2rem 1.3rem;border:1.5px dashed var(--muted)}
 .nein s{text-decoration-color:var(--rose-d);text-decoration-thickness:2px}
@@ -193,7 +199,7 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
   .hero{min-height:min(88svh,740px);justify-content:flex-end}
   .hero>img{height:66%;object-position:54% 15%}
   .hero::after{background:linear-gradient(0deg,#262626 40%,rgba(38,38,38,.75) 52%,rgba(38,38,38,0) 66%)}
-  .trio,.cols,.personas,.notes,.nein,.test{grid-template-columns:1fr}
+  .trio,.cols,.personas,.notes,.nein,.test,.stimmen{grid-template-columns:1fr}
   .test .plain,.offen{columns:1}
   .fenster{font-size:.88rem;padding:.35rem .6rem}
   .pins{grid-template-columns:1fr 1fr;gap:1.1rem .8rem}

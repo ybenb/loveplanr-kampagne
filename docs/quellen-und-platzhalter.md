@@ -33,6 +33,10 @@ Alle Zitate stammen wörtlich von https://loveplanr.com/ und https://loveplanr.c
 | 05 | «Die Webseite war super schnell erstellt und unsere Gäste hatten alle wichtigen Informationen an einem Ort.» | Aline & Josia |
 | 06 | «Wir hatten Gästeliste, Sitzplan und Einladungen endlich an einem Ort.» | Sabine & Markus |
 
+## Nutzerzahl auf Pin 02
+
+«Bereits von 10’000+ Hochzeitspaaren genutzt» steht wörtlich auf https://loveplanr.com/hochzeitswebsite/ (abgerufen am 05.11.2026). Der Nutzer hat die Verwendung freigegeben. Es ist eine Angabe von Loveplanr, die das Team nicht selbst geprüft hat.
+
 ## Startfassungen und Vorschläge
 
 | Element | Heute | Später | Von wem |
@@ -47,7 +51,6 @@ Alle Zitate stammen wörtlich von https://loveplanr.com/ und https://loveplanr.c
 ## Was wir bewusst nicht zeigen
 
 - Suchvolumen und Benchmarks: keine belegten Zahlen vorhanden.
-- «10'000+ Hochzeitspaare»: steht auf loveplanr.com, wird aber erst nach Bestätigung übernommen.
 - Budget, Kundenziel und Namen der Gründer.
 
 ## Fotos

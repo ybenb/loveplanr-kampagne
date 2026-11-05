@@ -28,6 +28,7 @@ def url(p): return p["path"] if p["path"].startswith("http") else SITE + p["path
 
 def alt(p):
     bits = [plain(p["head"])]
+    if p.get("proof"): bits.insert(0, p["proof"] + ".")
     if p.get("sub"): bits.append(plain(p["sub"]))
     if p.get("steps"): bits.append(", ".join(p["steps"]))
     return f"Pin {p['id'][:2]}: " + " ".join(bits)

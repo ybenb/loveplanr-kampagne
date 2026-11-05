@@ -42,7 +42,8 @@ Team selbst, ohne KI. Es gehört nicht zu diesem Log.
 
 | 24 | «[12 Fotos] Hier hat es noch mehr fotos, du hast zu viele Placeholder verwendet» | Die vier Hub-Pins neu geschrieben und mit den neuen Fotos gestaltet. Sie behaupten nichts über Kunden und laufen als Startfassung, bis echtes Material vorliegt. Pins 09 und 10 mit passenderen Fotos, neue Fotos auf der Website bei Boards, Personas und in einem Bildstreifen. | `d007ae1` |
 
-| 25 | «ass sie ohne Kundenaussage funktionieren und mit de, du darfst auch kundenaussagen daraufpacken.» (nimmt Bezug auf eine Zwischennachricht der KI) | Echte Zitate wörtlich von loveplanr.com geholt und auf die Pins 04, 05 und 06 gesetzt, Fotos dort als «Symbolbild» markiert. Die Zitate stehen auch im Bereich 8 der Website. | dieser Commit |
+| 25 | «ass sie ohne Kundenaussage funktionieren und mit de, du darfst auch kundenaussagen daraufpacken.» (nimmt Bezug auf eine Zwischennachricht der KI) | Echte Zitate wörtlich von loveplanr.com geholt und auf die Pins 04, 05 und 06 gesetzt, Fotos dort als «Symbolbild» markiert. Die Zitate stehen auch im Bereich 8 der Website. | `e425332` |
+| 26 | «Die AUssage darf auf dem Pin platziert werden.» (Antwort auf die Rückfrage der KI zu «Bereits von 10’000+ Hochzeitspaaren genutzt») | Aussage wörtlich auf Pin 02 und in dessen Beschreibung gesetzt. Nicht auf Pin 01, weil dieser im Promoted-Test gegen Pin 09 läuft und nur die Botschaft Preis oder Hilfe vergleichen soll. | dieser Commit |
 
 Die Prompts 20 bis 23 gehören zur selben Iteration, weil der Bau über Nacht unterbrochen wurde. Darum gibt es dafür einen gemeinsamen Commit.
 

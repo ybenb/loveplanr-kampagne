@@ -162,7 +162,7 @@ def prozess():
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
 <header class="top">
-  <a class="mark" href="../">Einmal reicht<span aria-hidden="true">.</span></a>
+  <a class="mark" href="../"><img src="../assets/img/loveplanr-logo.webp" width="598" height="66" alt="Loveplanr"><span class="mark-k">Einmal reicht<span aria-hidden="true">.</span></span></a>
   <nav aria-label="Bereiche">
     <a href="#stand">Stand der Pins</a>
     <a href="#offen">Offene Punkte</a>

@@ -124,3 +124,41 @@ Entscheide der KI in Iteration 5, die das Team prüfen sollte:
 - **Zielwert:** ≤ 25 CHF und Stopp über 30 CHF wie im Prompt. Dazwischen wird beobachtet. Die Hauptseite nennt die frühere Spanne nicht mehr.
 - **Abschnitte:** Keiner wurde gelöscht. Verschoben wurden der Prozess-Bereich und die Hinweise «Noch zu prüfen» und «Die fehlende Seite» auf die Unterseite Prozess.
 
+## Iteration 6: Logo und Hintergrundvideo
+
+Prompts im Wortlaut. Der Link zu loveplanr.com stand mit Tracking-Parametern einer Anzeige im Prompt. Er ist hier gekürzt, die lokalen Pfade sind ebenfalls gekürzt.
+
+```
+löve.ch (haben wir zusammen gebaut)
+```
+
+```
+https://loveplanr.com/hochzeitswebsite/?[Tracking-Parameter] Hier siehst du die Website, das logo soll darauf sein (evtl. kann man das übernehmen) Zudem sende ich dir anbei mehrere Videos. Ich will, dass du diese einbaust (zb. als Hero im Hintergrund) verwende dafür gängige Design best practices. [Downloads]/wedding-couple-holding-hands-at-outdoor-ceremony-….mov [Downloads]/bride-showing-off-ring-hugging-groom-in-bridal-sho-….mov [Downloads]/aerial-view-of-couple-dancing-on-grassy-field-….zip
+```
+
+```
+DU sollst nicht ein hero aus dem Video nehmen, sondern die videos als Background einsetzen. wie bei deplo.io (dort hat es ebenfalls ein Video im Hintergrund).
+```
+
+```
+Öffne mir local host damit ich sehe, wie es aussehen könnte
+```
+
+```
+[Screenshot der Startseite, Pfeil auf das Hero-Foto] Hier soll das Video laufen, damit du dir das richtig vorstellen kanns
+```
+
+```
+Ich finde das Bild vom Tanzenden paar super, nehmen wir das.
+```
+
+Ergebnis und Entscheide der KI, die das Team prüfen sollte:
+
+- **Logo:** Die Wortmarke in der Kopfzeile ist die Originaldatei von loveplanr.com, als WebP verkleinert. Die Pins tragen weiterhin die Rekonstruktion.
+- **Video:** Die Drohnenaufnahme des tanzenden Paars ersetzt das Hero-Foto. Aufbau, Höhe und Verlauf bleiben gleich. In einer lokalen Vorschau standen zwei Varianten zur Wahl: alle drei Clips nacheinander oder ein Clip pro Bereich. Gewählt hat der Nutzer nur den Tanz. Die beiden anderen Clips sind nicht im Repo.
+- **Gespiegelt:** Der Clip läuft horizontal gespiegelt. So steht das Paar rechts, und der weisse Text liegt nicht auf dem weissen Kleid.
+- **Best Practices:**
+  - Das Standbild erscheint sofort, das Video wird erst danach geladen.
+  - Es gibt zwei Grössen: 1280 px (2,2 MB) und 720 px fürs Handy (0,8 MB). Das Video läuft ohne Ton und pausiert ausserhalb des Bildschirms.
+  - Bei «Bewegung reduzieren» und im Datensparmodus bleibt das Standbild stehen.
+  - Ein Pause-Knopf erfüllt WCAG 2.2.2 (bewegte Inhalte über 5 Sekunden müssen sich anhalten lassen).

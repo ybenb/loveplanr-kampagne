@@ -62,6 +62,17 @@ Die Prüfung nach der Rubric des Dozenten zeigte Fehler, die beim Bau jedes einz
 - **Begriffe gemischt:** «Hochzeitswebseite», «Hochzeitswebsite» und «Hochzeitsseite» standen nebeneinander. Korrektur: «Hochzeitswebseite», wie Loveplanr.
 - **Bemerkt:** durch den Nutzer in Prompt 27. Die KI hatte Bereiche einzeln geprüft, nie einen Wert quer über alle Bereiche.
 
+### 7. «Hero im Hintergrund» falsch verstanden
+- **Output:** Nach dem Hinweis auf deplo.io baute die KI den ganzen Hero um: Video vollflächig, Text unten, höherer Bereich. Verlangt war nur, dass das Video an der Stelle des Fotos läuft.
+- **Bemerkt:** Der Nutzer schickte einen Screenshot mit einem Pfeil auf das Foto.
+- **Korrektur:** Layout auf den alten Stand zurückgesetzt, nur das Foto durch das Video ersetzt.
+- **Lehre:** Ein Verweis auf eine andere Website beschreibt die Wirkung, nicht unbedingt das Layout. Ein Screenshot klärte mehr als eine Rückfrage mit Varianten.
+
+### 8. Weisser Text auf weissem Kleid
+- **Output:** Im ersten Entwurf tanzte das Paar genau hinter dem Titel «reicht.».
+- **Bemerkt:** Die KI selbst, beim Prüfen des Screenshots.
+- **Korrektur:** Clip horizontal gespiegelt, das Paar steht jetzt rechts.
+
 ## B. Korrekturen an den Vorgaben (keine KI-Fehler)
 
 Beim Abgleich mit loveplanr.com und der Hilfe von Pinterest zeigten sich Abweichungen in der ursprünglichen Projektvorgabe:

@@ -22,17 +22,33 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
 
 /* Kopfzeile */
 .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:1.5rem;padding:.7rem clamp(1.15rem,4vw,2.5rem);background:rgba(255,246,243,.95);border-bottom:1px solid var(--line)}
-.mark{font:400 1.3rem/1 var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}
-.mark span{color:var(--rose)}
+.mark{display:flex;align-items:center;gap:.8rem;font:400 1.15rem/1 var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}
+.mark img{height:20px;width:auto}
+.mark-k{padding-left:.8rem;border-left:1px solid var(--line)}
+.mark-k span{color:var(--rose)}
 .top nav{display:flex;gap:1.1rem;margin-left:auto;overflow-x:auto;scrollbar-width:none;font-size:.92rem}
 .top nav::-webkit-scrollbar{display:none}
 .top nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:.25rem 0}
 .top nav a:hover{color:var(--rose-d);text-decoration:underline}
 
 /* Hero */
+/* Hintergrundvideo im Hero: liegt an der Stelle des früheren Fotos, Standbild bis das Video läuft */
+.bg{position:absolute;inset:0;pointer-events:none;user-select:none;overflow:hidden}
+.bg img,.bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bg video{opacity:0;transition:opacity .9s ease}
+.bg video.on{opacity:1}
+.bg::after{content:"";position:absolute;inset:0}
+.vid-toggle{position:absolute;z-index:2;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1.5px solid rgba(255,255,255,.75);background:rgba(25,18,16,.35);cursor:pointer}
+.vid-toggle:hover{background:rgba(25,18,16,.6)}
+.vid-toggle[hidden]{display:none}
+.vt-ico{width:12px;height:14px;border-left:4px solid #fff;border-right:4px solid #fff}
+.vid-toggle[aria-pressed="true"] .vt-ico{width:0;height:0;border:0;border-left:13px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Hero */
 .hero{position:relative;min-height:min(68vh,620px);display:flex;flex-direction:column;justify-content:center;background:var(--ink);overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,18,16,.78),rgba(25,18,16,.45) 42%,rgba(25,18,16,0) 68%)}
+.hero .bg img,.hero .bg video{object-position:40% 40%;transform:scaleX(-1)}
+.hero .bg::after{background:linear-gradient(90deg,rgba(25,18,16,.78),rgba(25,18,16,.45) 42%,rgba(25,18,16,0) 68%)}
 .hero-txt{position:relative;z-index:1;color:#fff;max-width:37rem;padding:clamp(2rem,5vw,3.5rem) clamp(1.15rem,6vw,5rem)}
 .hero h1{font-size:clamp(4.2rem,11vw,8.5rem);line-height:.96;letter-spacing:-.015em;margin-bottom:1.25rem}
 .lead{font-size:clamp(1.12rem,1.9vw,1.32rem);line-height:1.45}
@@ -254,9 +270,12 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
   .top{flex-direction:column;align-items:flex-start;gap:.3rem;padding-top:.5rem;padding-bottom:.35rem}
   .top nav{margin-left:0;width:100%}
   html{scroll-padding-top:5.5rem}
+  .mark img{height:16px}
   .hero{min-height:min(78svh,600px);justify-content:flex-end}
-  .hero>img{height:66%;object-position:54% 15%}
-  .hero::after{background:linear-gradient(0deg,#262626 40%,rgba(38,38,38,.75) 52%,rgba(38,38,38,0) 66%)}
+  .hero .bg{bottom:auto;height:66%}
+  .hero .bg img,.hero .bg video{object-position:50% 50%}
+  .hero .bg::after{background:linear-gradient(0deg,#262626 0%,rgba(38,38,38,.6) 25%,rgba(38,38,38,0) 60%)}
+  .vid-toggle{top:1rem;bottom:auto}
   .trio,.cols,.personas,.notes,.nein,.test,.stimmen{grid-template-columns:1fr}
   .test .plain,.offen{columns:1}
   .fenster{font-size:.88rem;padding:.35rem .6rem}
@@ -286,4 +305,5 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .pin img{transition:none}
+  .bg video{display:none}
 }

@@ -11,14 +11,14 @@
 <meta property="og:image" content="https://xn--lve-sna.ch/assets/img/hero-900.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29'%3E%3Cpath fill='%23db7f74' d='M16 29S0 19 0 8.5C0 3.7 3.7 0 8.3 0 11.4 0 14.3 1.7 16 4.4 17.7 1.7 20.6 0 23.7 0 28.3 0 32 3.7 32 8.5 32 19 16 29 16 29z'/%3E%3C/svg%3E">
-<link rel="preload" as="image" type="image/webp" href="assets/img/hero-900.webp" imagesrcset="assets/img/hero-900.webp 1000w, assets/img/hero.webp 1900w" imagesizes="100vw">
+<link rel="preload" as="image" type="image/webp" href="assets/video/tanz-poster-900.webp" imagesrcset="assets/video/tanz-poster-900.webp 900w, assets/video/tanz-poster.webp 1600w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
 
 <header class="top">
-  <a class="mark" href="#start">Einmal reicht<span aria-hidden="true">.</span></a>
+  <a class="mark" href="#start"><img src="assets/img/loveplanr-logo.webp" width="598" height="66" alt="Loveplanr"><span class="mark-k">Einmal reicht<span aria-hidden="true">.</span></span></a>
   <nav aria-label="Bereiche">
     <a href="#pins">Pins</a>
     <a href="#ausgangslage">Ausgangslage</a>
@@ -33,7 +33,11 @@
 </header>
 
 <section class="hero" id="start">
-  <img src="assets/img/hero-900.webp" srcset="assets/img/hero-900.webp 1000w, assets/img/hero.webp 1900w" sizes="100vw" width="1900" height="1268" alt="Brautpaar steht sich im Grünen gegenüber und lächelt sich an." fetchpriority="high">
+  <div class="bg" aria-hidden="true">
+    <img src="assets/video/tanz-poster-900.webp" srcset="assets/video/tanz-poster-900.webp 900w, assets/video/tanz-poster.webp 1600w" sizes="100vw" width="1600" height="900" alt="" fetchpriority="high">
+    <video muted loop playsinline preload="none" data-src="assets/video/tanz-{w}.mp4"></video>
+  </div>
+  <button class="vid-toggle" type="button" aria-pressed="false" hidden><span class="vt-ico" aria-hidden="true"></span><span class="sr">Video anhalten</span></button>
   <div class="hero-txt">
     <p class="eyebrow">Pinterest-Kampagne für Loveplanr</p>
     <h1>Einmal<br>reicht.</h1>
@@ -496,8 +500,32 @@
 <footer class="foot">
   <div class="wrap">
     <p><strong>Studentisches Projekt.</strong> Kurs «Digital Marketing for Start-ups», ZHAW, HS 2026, Team 4. Kein offizieller Auftritt von Loveplanr.</p>
-    <p>Fotos: Stock-Motive, über Envato lizenziert. Sie zeigen keine Kundenpaare, auch nicht auf den Pins mit Zitaten. Die Wortmarke auf den Pins ist eine Rekonstruktion, bis das Originallogo vorliegt. Laura, Marco und Peter sind fiktive Personas. Produktangaben von <a href="https://loveplanr.com">loveplanr.com</a>, geprüft am 05.11.2026.</p>
+    <p>Fotos und Video: Stock-Motive, über Envato lizenziert. Sie zeigen keine Kundenpaare, auch nicht auf den Pins mit Zitaten. Das Logo in der Kopfzeile stammt von loveplanr.com. Die Wortmarke auf den Pins ist noch eine Rekonstruktion. Laura, Marco und Peter sind fiktive Personas. Produktangaben von <a href="https://loveplanr.com">loveplanr.com</a>, geprüft am 05.11.2026.</p>
   </div>
 </footer>
+<script>
+/* Hintergrundvideo im Hero: lädt erst in Sichtweite, pausiert ausserhalb, respektiert «Bewegung reduzieren» und Datensparmodus. Ohne JavaScript bleibt das Standbild. */
+(function () {
+  var bg = document.querySelector('.hero .bg'), v = bg && bg.querySelector('video'), b = document.querySelector('.vid-toggle');
+  if (!v || matchMedia('(prefers-reduced-motion: reduce)').matches || (navigator.connection && navigator.connection.saveData) || !('IntersectionObserver' in window)) return;
+  var gestoppt = false, sichtbar = false;
+  function spielen() {
+    if (!v.src) v.src = v.dataset.src.replace('{w}', matchMedia('(max-width: 760px)').matches ? '720' : '1280');
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  }
+  v.addEventListener('playing', function () { v.classList.add('on'); }, { once: true });
+  new IntersectionObserver(function (e) {
+    sichtbar = e[0].isIntersecting;
+    if (sichtbar && !gestoppt) spielen(); else v.pause();
+  }).observe(bg);
+  b.hidden = false;
+  b.addEventListener('click', function () {
+    gestoppt = !gestoppt;
+    if (gestoppt) v.pause(); else if (sichtbar) spielen();
+    b.setAttribute('aria-pressed', String(gestoppt));
+    b.querySelector('.sr').textContent = gestoppt ? 'Video abspielen' : 'Video anhalten';
+  });
+})();
+</script>
 </body>
 </html>

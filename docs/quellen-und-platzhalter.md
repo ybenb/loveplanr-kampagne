@@ -20,6 +20,8 @@
 
 - Planungsfenster 6 bis 12 Monate vor der Hochzeit, Personas, Keyword-Auswahl.
 - Der bisherige Social-Media-Auftritt setzt auf Humor (Einschätzung des Teams).
+- Start im Januar: Über die Festtage verloben sich nach Einschätzung des Teams viele Paare, danach beginnt die Planung. Keine Messung, auf der Website als «Annahme» markiert.
+- «Komplettpaket, von Loveplanr empfohlen» auf Pin 02: loveplanr.com/preise markiert das Komplettpaket mit «EMPFOHLEN» (geprüft am 14.11.2026). Der Knopf «Jetzt kostenlos starten» auf den Pins 01 und 03 übernimmt den Wortlaut der Knöpfe auf loveplanr.com.
 - Zielwert Kosten pro Kunde ≤ 25 CHF, Stopp über 30 CHF (vom Team festgelegt in Prompt 27). Weitere Zahlen aus dem Businessplan bleiben privat.
 - Die Schweiz als Werbemarkt stammt aus einer älteren Pinterest-Hilfeseite und ist im Ads Manager zu prüfen.
 

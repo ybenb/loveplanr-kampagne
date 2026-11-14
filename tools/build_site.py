@@ -9,7 +9,7 @@ from pins_data import PINS, PRINZIP, SITE
 
 NEXT = {
     "01-einmal-ja": "Pakete vergleichen, dann kostenlos starten",
-    "02-einmal-reicht": "Komplettpaket verstehen, dann kostenlos starten",
+    "02-einmal-reicht": "Empfohlenes Komplettpaket verstehen, dann kostenlos starten",
     "03-mehr-vorfreude": "Konto erstellen und die Seite kostenlos bauen",
     "04-melek-rafael": "Sitzplan verstehen, Komplettpaket prüfen",
     "05-aline-josia": "Funktionen ansehen, dann kostenlos starten",
@@ -23,6 +23,15 @@ NEXT = {
     "13-sabine-markus": "Rückmeldungen verstehen, dann kostenlos starten",
 }
 
+# Titelschrift Bodoni Moda (SIL OFL), auf Gewicht 400 und die genutzten Zeichen reduziert.
+# Eingebettet statt verlinkt: ein eigener Abruf verzögerte auf dem Handy das Hero-Bild (LCP 1,5 s -> 2,0 s).
+FONT = ROOT / "assets/fonts/bodoni-moda-latin.woff2"
+def font_style():
+    import base64
+    data = base64.b64encode(FONT.read_bytes()).decode()
+    return ('<style>@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:400;font-display:swap;'
+            f'src:url(data:font/woff2;base64,{data}) format("woff2")}}</style>')
+
 def plain(s): return re.sub(r"\s+", " ", s.replace("<br>", " ")).strip()
 def esc(s): return html.escape(s, quote=True)
 def url(p): return p["path"] if p["path"].startswith("http") else SITE + p["path"]
@@ -34,6 +43,8 @@ def alt(p):
     bits.append(plain(p["head"]))
     if p.get("sub"): bits.append(plain(p["sub"]))
     if p.get("steps"): bits.append(", ".join(p["steps"]))
+    if p.get("reco"): bits.append(p["reco"] + ".")
+    if p.get("cta"): bits.append("Button: " + p["cta"].rstrip(" →") + ".")
     if p.get("note"): bits.append(p["note"] + ".")
     return f"Pin {pin_no(p)}: " + " ".join(bits)
 
@@ -157,6 +168,7 @@ def prozess():
 <meta name="description" content="Stand der Pins, offene Punkte, Prompt-Log, AI-Fehler und Quellen der Kampagne «Einmal reicht.».">
 <link rel="canonical" href="https://xn--lve-sna.ch/prozess/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29'%3E%3Cpath fill='%23db7f74' d='M16 29S0 19 0 8.5C0 3.7 3.7 0 8.3 0 11.4 0 14.3 1.7 16 4.4 17.7 1.7 20.6 0 23.7 0 28.3 0 32 3.7 32 8.5 32 19 16 29 16 29z'/%3E%3C/svg%3E">
+{font_style()}
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -183,7 +195,7 @@ def prozess():
 <section id="quellen"><h2>Quellen</h2>{doc("quellen-und-platzhalter.md")}</section>
 </div>
 </main>
-<footer class="foot"><div class="wrap"><p><strong>Studentisches Projekt.</strong> Kurs «Digital Marketing for Start-ups», ZHAW, HS 2026, Team 4. Kein offizieller Auftritt von Loveplanr.</p></div></footer>
+<footer class="foot"><div class="wrap"><p><strong>Studentisches Projekt.</strong> Kurs «Digital Marketing for Start-ups», ZHAW, HS 2026, Team 4. Kein offizieller Auftritt von Loveplanr.</p><p><a href="../">Zur Kampagne</a> · <a href="../assets/pins/pin-set.csv">Alle Pins als CSV</a> · <a href="https://github.com/ybenb/loveplanr-kampagne">Quellcode auf GitHub</a></p></div></footer>
 </body>
 </html>
 """
@@ -197,6 +209,7 @@ def main():
     s = inject(s, "RESERVE", "\n".join(reserve(p) for p in PINS if p.get("reserve")))
     s = inject(s, "MOCK", mock(next(p for p in PINS if p["id"].startswith("09"))))
     s = inject(s, "FUNNEL", "\n".join(row(p) for p in PINS))
+    s = inject(s, "FONT", font_style())
     f.write_text(s, encoding="utf-8")
     d = ROOT / "prozess"
     d.mkdir(exist_ok=True)

@@ -204,3 +204,28 @@ Baue zudem das README auf GitHub aus, es soll gut lesbar, informativ und umfangr
 - Die Pin-Tabelle ist aus `tools/pins_data.py` erzeugt, damit sie mit Website und CSV übereinstimmt.
 - Budget, Kundenzahl aus dem Businessplan und Gründernamen bleiben draussen, wie auf der Website.
 - **Korrektur:** Die beiden neuen Einträge in `ai-fehler.md` aus Iteration 6 trugen die Nummern 7 und 8, die schon vergeben waren. Neu heissen sie 11 und 12.
+
+## Iteration 9: Design- und Marketing-Vorschläge umsetzen
+
+Die KI hatte nach Iteration 7 acht Design- und sechs Marketing-Vorschläge gemacht (Skills Marketing-Psychologie, Copywriting, Social Content). Antwort im Wortlaut:
+
+```
+Designvorschlag: 1 Schrift anpassen, damit es auf Windows ebenfalls edel aussieht (empfehlung Bodoni Moda) 2. pins nach vorne 3. mobile derzeit ignorieren, 4. Hero erweitern mit den Pins, 5. akzeptiert, 6. Zitate ebenfalls akzeptiert, lesbarkeit erhöhen. 7. ebenfalls. 8. Fusszeile entsprechend ergänzen.  bez. Marketing-Vorschlägen. 1. abgelehnt, 2. akzeptiert bitte umsetzen. 3. bitte kennzeichnen. 4. bitte ebenfalls ergänzen, 5. ja einfügen, 6. ebenfalls ausführen aber schauen, dass es nicht zu überfüllt wird.
+```
+
+Umgesetzt:
+
+- **Schrift:** Die Titelschrift ist neu Bodoni Moda (SIL Open Font License) statt Didot. Didot gibt es nur auf Apple-Geräten, auf Windows erschien Georgia. Die Datei ist auf Gewicht 400 und die genutzten Zeichen reduziert (46 → 15 KB) und direkt in die Seiten eingebettet.
+- **Pins nach vorne, Hero mit Pins:** Die drei Hero-Pins liegen als Fächer im Hero und führen zum Pin-Set. Dazu kommen die Knöpfe «Die 12 Pins ansehen» und «Zum Prozess».
+  - *Deutung der KI:* Vorschlag 2 war «Idee vor die Pins». Die Antwort «pins nach vorne» hat die KI so verstanden, dass die Pins zuerst kommen. Der Bereich 1 bleibt darum das Pin-Set, und die Pins erscheinen zusätzlich schon im Hero.
+- **Navigation:** Sieben statt neun Punkte. «Umsetzung» fasst Boards, Keywords und Kalender zusammen, «Prozess» ist ein Knopf. Der Bereich im Bild wird markiert.
+- **Zitate:** Raster 2 × 2 statt 3 + 1. Dunkle Schrift auf Weiss statt umgekehrt, grösser und mit mehr Zeilenabstand.
+- **Prinzipien:** Die zwei weggelassenen Prinzipien füllen die Lücke im Raster.
+- **Fusszeile:** Drei Spalten mit Projekt, Dokumentation (Prozess, Prompt-Log, AI-Fehler, CSV, GitHub) sowie Quellen und Rechten.
+- **Marketing 2:** Knopf «Jetzt kostenlos starten →» auf den Pins 01 und 03, im Wortlaut der Knöpfe auf loveplanr.com.
+- **Marketing 3:** Der Start im Januar steht im Kalender als «Annahme» markiert.
+- **Marketing 4:** Der Pinterest-Tag steht bei den KPIs und bei den offenen Punkten für die Gründer.
+- **Marketing 5:** Pin 02 trägt «Komplettpaket, von Loveplanr empfohlen». loveplanr.com/preise markiert es mit «EMPFOHLEN», am 14.11.2026 geprüft (Default-Effekt).
+- **Marketing 6:** Board-Namen haben das Keyword vorne, das Hub-Board heisst neu «Hochzeitsplanung Erfahrungen: echte Paare». Je Board gibt es eine Beschreibung für Pinterest in einem Satz.
+- **Abgelehnt oder zurückgestellt:** Video-Pin (Marketing 1) abgelehnt, Handy-Ansicht (Design 3) zurückgestellt.
+- **Lighthouse lokal:** Beide Seiten, Handy und Desktop, 100 in allen vier Kategorien.

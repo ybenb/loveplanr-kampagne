@@ -2,17 +2,17 @@
 UTM = "utm_source=pinterest&utm_medium=organic&utm_campaign=einmal-reicht&utm_content="
 SITE = "https://loveplanr.com"
 PINS = [
- dict(id="01-einmal-ja", board="Hero", layout="photo", photo="couple-celebrate-wedding-on-rocky-shoreline-at-sun-2026-09-23-01-57-15-utc.jpg", pos="62% 50%", place="top", stamp=True,
+ dict(id="01-einmal-ja", board="Hero", layout="photo", photo="couple-celebrate-wedding-on-rocky-shoreline-at-sun-2026-09-23-01-57-15-utc.jpg", pos="62% 50%", place="top", stamp=True, cta="Jetzt kostenlos starten →",
   head="Einmal Ja.<br>Einmal zahlen.", sub="Eure Hochzeitswebseite und alles, was dazugehört. Kein Abo.",
   title="Hochzeitswebseite ohne Abo: einmal Ja, einmal zahlen",
   desc="Hochzeitswebseite, Rückmeldungen, Gästeliste, Wunschliste und Fotogalerie an einem Ort. Ab CHF 149, einmalig und ohne Abo. Kostenlos ausprobieren, Paket erst später wählen.",
   kw="Hochzeitswebseite, Hochzeitswebseite erstellen, Hochzeit planen Schweiz", path="/preise/", principle="USP: einmaliger Preis", status=""),
  dict(id="02-einmal-reicht", board="Hero", layout="photo", photo="elegant-bride-and-groom-embrace-by-the-water-2026-01-08-02-08-06-utc.jpg", pos="50% 35%", place="bottom", stamp=True, note="Angabe von loveplanr.com, Foto: Stock", proof="Bereits von 10’000+ Hochzeitspaaren genutzt",
-  head="Einmal reicht.", sub="Gäste einmal erfassen.<br>Der Rest baut darauf auf.",
+  head="Einmal reicht.", sub="Gäste einmal erfassen.<br>Der Rest baut darauf auf.", reco="Komplettpaket, von Loveplanr empfohlen",
   title="Hochzeit an einem Ort planen: Gäste nur einmal erfassen",
-  desc="Bereits von 10’000+ Hochzeitspaaren genutzt. Webseite, Rückmeldungen, Sitzplan, Checkliste, Budget und digitale Karten im Komplettpaket. CHF 249, einmalig und ohne Abo. Die Gästeliste erfasst ihr nur einmal.",
+  desc="Bereits von 10’000+ Hochzeitspaaren genutzt. Webseite, Rückmeldungen, Sitzplan, Checkliste, Budget und digitale Karten im Komplettpaket, das Loveplanr selbst empfiehlt. CHF 249, einmalig und ohne Abo. Die Gästeliste erfasst ihr nur einmal.",
   kw="Hochzeit planen, Hochzeitsplanung Tools, Gästeliste Hochzeit", path="/komplettpaket/", principle="USP: alles an einem Ort, Social Proof", status="Freigabe für Pinterest offen"),
- dict(id="03-mehr-vorfreude", board="Hero", layout="photo", photo="joyful-groom-lifting-bride-in-sunny-park-during-we-2026-09-25-03-54-22-utc.jpg", pos="50% 30%", place="bottom",
+ dict(id="03-mehr-vorfreude", board="Hero", layout="photo", photo="joyful-groom-lifting-bride-in-sunny-park-during-we-2026-09-25-03-54-22-utc.jpg", pos="50% 30%", place="bottom", cta="Jetzt kostenlos starten →",
   head="Weniger Planungschaos.<br>Mehr Vorfreude.", sub="Hochzeitswebseite kostenlos erstellen. Paket erst später wählen.",
   title="Hochzeitswebseite kostenlos erstellen, Paket erst später wählen",
   desc="Startet mit eurer Hochzeitswebseite und testet alle Funktionen in Ruhe. Erst wenn ihr bereit seid, wählt ihr das passende Paket. Einmalig bezahlt, ohne Abo.",
@@ -70,7 +70,7 @@ PINS = [
 ]
 # Prinzip und das konkrete Element, an dem es im Pin sichtbar ist
 PRINZIP = {
- "01-einmal-ja": ("Commitment & Consistency", "Beschreibung «Kostenlos ausprobieren»"),
+ "01-einmal-ja": ("Commitment & Consistency", "Button «Jetzt kostenlos starten»"),
  "02-einmal-reicht": ("Social Proof", "Hinweis «Bereits von 10’000+ Hochzeitspaaren genutzt»"),
  "03-mehr-vorfreude": ("Commitment & Consistency", "Zeile «Paket erst später wählen»"),
  "04-melek-rafael": ("Social Proof", "Zitat von Melek & Rafael"),

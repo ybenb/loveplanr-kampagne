@@ -61,7 +61,7 @@ Loveplanr bündelt digitale Hochzeits-Tools auf einer Plattform und verkauft sie
 Die Boards folgen dem Modell **Hero, Hub, Help**:
 - **Help** liefert Antworten auf konkrete Suchen und hält die Kampagne am Leben. Diese Pins starten darum zuerst.
 - **Hero** setzt die Lancierung mit der Kernbotschaft.
-- **Hub** bringt echte Stimmen von Paaren.
+- **Hub** bringt echte Stimmen von Paaren (Board «Hochzeitsplanung Erfahrungen: echte Paare»).
 
 ## Was die Website zeigt
 
@@ -84,7 +84,7 @@ Format 2:3 (1000 × 1500 px), Deutsch, Schweizer Rechtschreibung. Das Keyword st
 
 | Pin | Board | Titel | Prinzip und Element | Zielseite | Stand |
 |---|---|---|---|---|---|
-| [01](assets/pins/01-einmal-ja.jpg) | Hero | Hochzeitswebseite ohne Abo: einmal Ja, einmal zahlen | **Commitment & Consistency**: Beschreibung «Kostenlos ausprobieren» | `loveplanr.com/preise/` | bereit |
+| [01](assets/pins/01-einmal-ja.jpg) | Hero | Hochzeitswebseite ohne Abo: einmal Ja, einmal zahlen | **Commitment & Consistency**: Button «Jetzt kostenlos starten» | `loveplanr.com/preise/` | bereit |
 | [02](assets/pins/02-einmal-reicht.jpg) | Hero | Hochzeit an einem Ort planen: Gäste nur einmal erfassen | **Social Proof**: Hinweis «Bereits von 10’000+ Hochzeitspaaren genutzt» | `loveplanr.com/komplettpaket/` | Freigabe für Pinterest offen |
 | [03](assets/pins/03-mehr-vorfreude.jpg) | Hero | Hochzeitswebseite kostenlos erstellen, Paket erst später wählen | **Commitment & Consistency**: Zeile «Paket erst später wählen» | `app.loveplanr.com/de/sign-up` | bereit |
 | [04](assets/pins/04-melek-rafael.jpg) | Hub | Sitzplan Hochzeit: Gäste nicht nochmals erfassen, sagen Melek & Rafael | **Social Proof**: Zitat von Melek & Rafael | `loveplanr.com/sitzplan/` | Freigabe für Pinterest offen |
@@ -136,10 +136,12 @@ Dazu kommen feste Inhaltsregeln: keine erfundenen Zahlen, keine erfundenen Zitat
 | 5 | `1464982` | Rollen-Prompt: Widersprüche behoben, Pins ins Zentrum, Prozess auf eigene Unterseite |
 | 6 | `7d8beb0`, `54aac6f` | Originallogo von Loveplanr, Hintergrundvideo im Hero (Ring-Clip) |
 | 7 | `09589d1` | Ladezeit und SEO auf 100, Sitemap, Indexierung |
+| 8 | `dfc2c94` | README für den Dozenten |
+| 9 | dieser Stand | Schrift Bodoni Moda, Hero mit Pins, Navigation, Zitate, Fusszeile, Knopf auf Pins 01 und 03, Empfehlung auf Pin 02, Board-Beschreibungen, Pinterest-Tag, Start im Januar als Annahme |
 
 ## Qualität und Technik
 
-**Lighthouse 12.6.1, Live-Seite, 14.11.2026:**
+**Lighthouse 12.6.1, 14.11.2026 (Iteration 7 live, Iteration 9 lokal gemessen):**
 
 | Seite | Gerät | Leistung | Barrierefreiheit | Best Practices | SEO |
 |---|---|---|---|---|---|
@@ -149,7 +151,8 @@ Dazu kommen feste Inhaltsregeln: keine erfundenen Zahlen, keine erfundenen Zitat
 | Prozess | Desktop | 100 | 100 | 100 | 100 |
 
 **Umgesetzt:**
-- Statisches HTML und CSS, ohne Framework und ohne Build-Schritt im Browser. Schriften sind Systemschriften.
+- Statisches HTML und CSS, ohne Framework und ohne Build-Schritt im Browser.
+- Titelschrift Bodoni Moda (SIL Open Font License), auf Gewicht 400 und die genutzten Zeichen reduziert (15 KB) und eingebettet. So sieht die Seite auf Windows gleich aus wie auf dem Mac, ohne Ladezeit zu verlieren. Fliesstext in Systemschriften.
 - Bilder als WebP mit `srcset` und `loading="lazy"`, feste Breiten und Höhen gegen Layout-Sprünge.
 - Hintergrundvideo: stumm, zwei Grössen (1280 px und 720 px), startet erst nach dem Laden der Seite, pausiert ausserhalb des Bildschirms. Pause-Knopf nach WCAG 2.2.2. Bei «Bewegung reduzieren» und im Datensparmodus bleibt das Standbild.
 - Barrierefreiheit: Sprunglink, sichtbarer Fokus, Alt-Texte, Tabellen werden auf dem Handy zu Karten.

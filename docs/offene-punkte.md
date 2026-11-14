@@ -7,10 +7,11 @@ Was fehlt, steht hier. Nichts davon ist auf der Website erfunden oder geschätzt
 - Freigabe für Pinterest: Dürfen die vier Paarzitate und «Bereits von 10’000+ Hochzeitspaaren genutzt» dort erscheinen? Der Nutzer hat sie für das Projekt freigegeben. Die Zustimmung von Gründern und Paaren für Pinterest ist offen. Bis dahin gehen die Pins 02, 04, 05, 06 und 13 nicht online.
 - Zielseite für die Gratis-Checkliste: Loveplanr bietet eine Online-Checkliste im Komplettpaket, aber keinen freien Download. Wir schlagen eine Zielseite vor, die eine Kurzfassung gegen die E-Mail-Adresse abgibt. Bis dahin ist Pin 08 nicht im Kalender und nicht im Test.
 - Längere Paar-Geschichten, Screenshots mit dem Hinweis «Erstellt mit Loveplanr» und Einwilligungen für weitere Hub-Pins.
-- Originallogo und exakte Farbwerte.
+- Exakte Farbwerte. Das Originallogo steht in der Kopfzeile der Website, die Pins tragen noch die Rekonstruktion.
 - Bestätigung der Preise in CHF. Das HTML von `/preise/` zeigt die Beträge ohne Währung, die FAQ nennt CHF.
 - Gehen Rückmeldungen ohne Konto der Gäste? Belegt ist «ohne App und ohne Registrierung» nur für Fotos.
-- Startdatum, Budget für den Promoted-Test und Weitergabe der UTM-Werte bis zum Kauf.
+- Startdatum, Budget für den Promoted-Test und Weitergabe der UTM-Werte bis zum Kauf. Vorschlag des Teams: Start im Januar (Annahme, siehe Quellen).
+- Pinterest-Tag (Messcode von Pinterest) auf loveplanr.com und bei der Anmeldung einbauen. Ohne ihn lassen sich Käufe nicht der Kampagne zuordnen, und die Kosten pro Kunde bleiben eine Schätzung.
 
 ## Vom Team
 

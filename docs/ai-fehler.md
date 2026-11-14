@@ -73,6 +73,18 @@ Die Prüfung nach der Rubric des Dozenten zeigte Fehler, die beim Bau jedes einz
 - **Bemerkt:** Die KI selbst, beim Prüfen des Screenshots.
 - **Korrektur:** Clip horizontal gespiegelt, das Paar steht jetzt rechts.
 
+### 13. Neue Elemente mit neuen Fehlern (Iteration 9)
+- **Output:**
+  - Die Pins im Hero lagen über dem Pause-Knopf des Videos.
+  - Die Zitate hatten doppelte Anführungszeichen: ein grosses als Dekoration und eines im Text.
+  - Die neue Schrift verzögerte auf dem Handy das Hero-Bild, Lighthouse fiel von 100 auf 98 (LCP 1,4 → 2,3 s).
+- **Bemerkt:** Die KI selbst, über Screenshots und eine Vergleichsmessung mit dem vorherigen Commit.
+- **Korrektur:**
+  - Pause-Knopf nach oben rechts verschoben.
+  - Dekoratives Zeichen entfernt.
+  - Für die Schrift zuerst zwei Versuche ohne Wirkung (Vorladen entfernen, Bild höher priorisieren). Erst eine Messung ohne Schrift zeigte die Ursache. Danach Schrift verkleinert und eingebettet, wieder 100 (LCP 1,5 s).
+- **Lehre:** Jede Design-Änderung braucht danach eine Messung. Die ersten zwei Vermutungen zur Ursache waren falsch.
+
 ## B. Korrekturen an den Vorgaben (keine KI-Fehler)
 
 Beim Abgleich mit loveplanr.com und der Hilfe von Pinterest zeigten sich Abweichungen in der ursprünglichen Projektvorgabe:

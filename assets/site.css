@@ -47,7 +47,7 @@ code{font-size:.85em;background:var(--sand);padding:.1em .3em;overflow-wrap:anyw
 
 /* Hero */
 .hero{position:relative;min-height:min(68vh,620px);display:flex;flex-direction:column;justify-content:center;background:var(--ink);overflow:hidden}
-.hero .bg img,.hero .bg video{object-position:40% 40%;transform:scaleX(-1)}
+.hero .bg img,.hero .bg video{object-position:50% 35%}
 .hero .bg::after{background:linear-gradient(90deg,rgba(25,18,16,.78),rgba(25,18,16,.45) 42%,rgba(25,18,16,0) 68%)}
 .hero-txt{position:relative;z-index:1;color:#fff;max-width:37rem;padding:clamp(2rem,5vw,3.5rem) clamp(1.15rem,6vw,5rem)}
 .hero h1{font-size:clamp(4.2rem,11vw,8.5rem);line-height:.96;letter-spacing:-.015em;margin-bottom:1.25rem}

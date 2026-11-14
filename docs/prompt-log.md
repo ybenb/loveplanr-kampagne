@@ -162,3 +162,12 @@ Ergebnis und Entscheide der KI, die das Team prüfen sollte:
   - Es gibt zwei Grössen: 1280 px (2,2 MB) und 720 px fürs Handy (0,8 MB). Das Video läuft ohne Ton und pausiert ausserhalb des Bildschirms.
   - Bei «Bewegung reduzieren» und im Datensparmodus bleibt das Standbild stehen.
   - Ein Pause-Knopf erfüllt WCAG 2.2.2 (bewegte Inhalte über 5 Sekunden müssen sich anhalten lassen).
+
+Nachtrag zu Iteration 6, Prompt im Wortlaut:
+
+```
+noch nicht pushen, ich will doch das Bild mit dem ring.
+```
+
+- **Video:** Der Ring-Clip (Braut zeigt den Ring und umarmt den Bräutigam) ersetzt die Drohnenaufnahme. Verwendet sind 10 Sekunden aus der Mitte, 1280 px mit 0,8 MB und 720 px mit 0,3 MB.
+- **Nicht gespiegelt:** Die KI verglich beide Ausrichtungen zu vier Zeitpunkten. Ungespiegelt steht das Gesicht der Braut rechts neben dem Titel, und der Ring bleibt an der richtigen Hand.

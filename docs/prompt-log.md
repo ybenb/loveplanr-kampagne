@@ -193,3 +193,14 @@ Ergebnis (Lighthouse 12.6.1, lokal, Handy-Profil):
 - **Agentisches Browsing:** `llms.txt` mit einer Kurzbeschreibung und den beiden Seiten.
 - **Indexierung:** IndexNow-Schlüssel für Bing und Yandex. Google braucht die Search Console, und dort muss der Nutzer die Domain selbst bestätigen.
 - **Nicht änderbar:** Komprimierung und Cache-Dauer legt GitHub Pages fest.
+
+## Iteration 8: README für den Dozenten
+
+```
+Baue zudem das README auf GitHub aus, es soll gut lesbar, informativ und umfangreich sein. Der Dozent soll direkt verstehen, was hier gemacht wurde.
+```
+
+- README neu gegliedert: auf einen Blick, Ausgangslage, Idee, Bereiche der Website, alle Pins mit Prinzip und Zielseite, Prinzipien, Arbeitsweise mit KI, Iterationen, Qualität, Aufbau, Quellen und Grenzen.
+- Die Pin-Tabelle ist aus `tools/pins_data.py` erzeugt, damit sie mit Website und CSV übereinstimmt.
+- Budget, Kundenzahl aus dem Businessplan und Gründernamen bleiben draussen, wie auf der Website.
+- **Korrektur:** Die beiden neuen Einträge in `ai-fehler.md` aus Iteration 6 trugen die Nummern 7 und 8, die schon vergeben waren. Neu heissen sie 11 und 12.

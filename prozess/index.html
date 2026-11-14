@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prozess: Einmal reicht. Pinterest-Kampagne für Loveplanr</title>
 <meta name="description" content="Stand der Pins, offene Punkte, Prompt-Log, AI-Fehler und Quellen der Kampagne «Einmal reicht.».">
-<meta name="robots" content="noindex">
+<link rel="canonical" href="https://xn--lve-sna.ch/prozess/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29'%3E%3Cpath fill='%23db7f74' d='M16 29S0 19 0 8.5C0 3.7 3.7 0 8.3 0 11.4 0 14.3 1.7 16 4.4 17.7 1.7 20.6 0 23.7 0 28.3 0 32 3.7 32 8.5 32 19 16 29 16 29z'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
 <header class="top">
-  <a class="mark" href="../"><img src="../assets/img/loveplanr-logo.webp" width="598" height="66" alt="Loveplanr"><span class="mark-k">Einmal reicht<span aria-hidden="true">.</span></span></a>
+  <a class="mark" href="../"><img src="../assets/img/loveplanr-logo.webp" width="398" height="44" alt="Loveplanr"><span class="mark-k">Einmal reicht<span aria-hidden="true">.</span></span></a>
   <nav aria-label="Bereiche">
     <a href="#stand">Stand der Pins</a>
     <a href="#offen">Offene Punkte</a>
@@ -116,7 +116,19 @@ docs/iterationen/, dann committen als
 <p>  - Das Standbild erscheint sofort, das Video wird erst danach geladen.</p>
 <p>  - Es gibt zwei Grössen: 1280 px (2,2 MB) und 720 px fürs Handy (0,8 MB). Das Video läuft ohne Ton und pausiert ausserhalb des Bildschirms.</p>
 <p>  - Bei «Bewegung reduzieren» und im Datensparmodus bleibt das Standbild stehen.</p>
-<p>  - Ein Pause-Knopf erfüllt WCAG 2.2.2 (bewegte Inhalte über 5 Sekunden müssen sich anhalten lassen).</p></section>
+<p>  - Ein Pause-Knopf erfüllt WCAG 2.2.2 (bewegte Inhalte über 5 Sekunden müssen sich anhalten lassen).</p>
+<p>Nachtrag zu Iteration 6, Prompt im Wortlaut:</p>
+<pre>noch nicht pushen, ich will doch das Bild mit dem ring.</pre>
+<ul><li><strong>Video:</strong> Der Ring-Clip (Braut zeigt den Ring und umarmt den Bräutigam) ersetzt die Drohnenaufnahme. Verwendet sind 10 Sekunden aus der Mitte, 1280 px mit 0,8 MB und 720 px mit 0,3 MB.</li><li><strong>Nicht gespiegelt:</strong> Die KI verglich beide Ausrichtungen zu vier Zeitpunkten. Ungespiegelt steht das Gesicht der Braut rechts neben dem Titel, und der Ring bleibt an der richtigen Hand.</li></ul>
+<h3>Iteration 7: Geschwindigkeit, SEO und Indexierung</h3>
+<p>Prompts im Wortlaut:</p>
+<pre>Ich will das du geschwindigkeit und design optimierst, bez. Design will ich das du local host öffnest und vorschläge machst, wie wir das Design noch verbessern können. Ausserdem verwende Marketing skills /skills marketing und schaue wo noch optimiert werden kann.</pre>
+<pre>[Drei Screenshots von PageSpeed Insights: Leistung 100, SEO 63, Agentisches Browsing 2/3] optimiere gemäss pagespeed index (anbei URL https://pagespeed.web.dev/analysis/https-xn--lve-sna-ch/r4t2ctgy28?form_factor=desktop SEO soll auch auf 100) führe indexierung durch, erstelle eine sitemap</pre>
+<p>Ergebnis (Lighthouse 12.6.1, lokal, Handy-Profil):</p>
+<ul><li><strong>Leistung Handy 79 → 100:</strong></li></ul>
+<p>  - Das Video startet erst nach dem Laden der Seite. Vorher blockierte das Dekodieren 834 ms lang die Seite (Total Blocking Time 900 ms → 0 ms).</p>
+<p>  - Die Pins haben neu eine 300-px-Variante mit <code>srcset</code>, und das Logo ist auf doppelte Anzeigegrösse verkleinert.</p>
+<ul><li><strong>SEO 63 → 100:</strong> <code>noindex</code> entfernt. Das war bisher ein bewusster Entscheid, der Nutzer will die Seite jetzt indexieren lassen. Neu sind <code>canonical</code>, <code>robots.txt</code>, <code>sitemap.xml</code> und strukturierte Daten (WebSite) mit dem Hinweis «Kein offizieller Auftritt von Loveplanr».</li><li><strong>Agentisches Browsing:</strong> <code>llms.txt</code> mit einer Kurzbeschreibung und den beiden Seiten.</li><li><strong>Indexierung:</strong> IndexNow-Schlüssel für Bing und Yandex. Google braucht die Search Console, und dort muss der Nutzer die Domain selbst bestätigen.</li><li><strong>Nicht änderbar:</strong> Komprimierung und Cache-Dauer legt GitHub Pages fest.</li></ul></section>
 <section id="fehler"><h2>AI-Fehler</h2><p>Hier stehen nur Fehler, die wirklich vorkamen, mit Output, Entdeckung und Korrektur. Teil A betrifft den Output der KI. Teil B betrifft Vorgaben, die sich beim Prüfen als veraltet oder ungenau zeigten. Das sind keine KI-Fehler.</p>
 <h3>A. Fehler der KI</h3>
 <h4>1. Login, der das Firmenkonto mit einbezogen hätte</h4>

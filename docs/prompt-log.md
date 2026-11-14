@@ -171,3 +171,25 @@ noch nicht pushen, ich will doch das Bild mit dem ring.
 
 - **Video:** Der Ring-Clip (Braut zeigt den Ring und umarmt den Bräutigam) ersetzt die Drohnenaufnahme. Verwendet sind 10 Sekunden aus der Mitte, 1280 px mit 0,8 MB und 720 px mit 0,3 MB.
 - **Nicht gespiegelt:** Die KI verglich beide Ausrichtungen zu vier Zeitpunkten. Ungespiegelt steht das Gesicht der Braut rechts neben dem Titel, und der Ring bleibt an der richtigen Hand.
+
+## Iteration 7: Geschwindigkeit, SEO und Indexierung
+
+Prompts im Wortlaut:
+
+```
+Ich will das du geschwindigkeit und design optimierst, bez. Design will ich das du local host öffnest und vorschläge machst, wie wir das Design noch verbessern können. Ausserdem verwende Marketing skills /skills marketing und schaue wo noch optimiert werden kann.
+```
+
+```
+[Drei Screenshots von PageSpeed Insights: Leistung 100, SEO 63, Agentisches Browsing 2/3] optimiere gemäss pagespeed index (anbei URL https://pagespeed.web.dev/analysis/https-xn--lve-sna-ch/r4t2ctgy28?form_factor=desktop SEO soll auch auf 100) führe indexierung durch, erstelle eine sitemap
+```
+
+Ergebnis (Lighthouse 12.6.1, lokal, Handy-Profil):
+
+- **Leistung Handy 79 → 100:**
+  - Das Video startet erst nach dem Laden der Seite. Vorher blockierte das Dekodieren 834 ms lang die Seite (Total Blocking Time 900 ms → 0 ms).
+  - Die Pins haben neu eine 300-px-Variante mit `srcset`, und das Logo ist auf doppelte Anzeigegrösse verkleinert.
+- **SEO 63 → 100:** `noindex` entfernt. Das war bisher ein bewusster Entscheid, der Nutzer will die Seite jetzt indexieren lassen. Neu sind `canonical`, `robots.txt`, `sitemap.xml` und strukturierte Daten (WebSite) mit dem Hinweis «Kein offizieller Auftritt von Loveplanr».
+- **Agentisches Browsing:** `llms.txt` mit einer Kurzbeschreibung und den beiden Seiten.
+- **Indexierung:** IndexNow-Schlüssel für Bing und Yandex. Google braucht die Search Console, und dort muss der Nutzer die Domain selbst bestätigen.
+- **Nicht änderbar:** Komprimierung und Cache-Dauer legt GitHub Pages fest.

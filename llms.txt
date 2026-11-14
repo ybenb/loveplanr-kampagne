@@ -1,0 +1,15 @@
+# Einmal reicht. Pinterest-Kampagne für Loveplanr
+
+> Studentisches Kampagnenkonzept, ZHAW, Kurs «Digital Marketing for Start-ups», HS 2026, Team 4. Kein offizieller Auftritt von Loveplanr. Loveplanr (https://loveplanr.com) ist eine Plattform für Hochzeitspaare: Hochzeitswebseite, Rückmeldungen, Gästeliste und weitere Tools zum einmaligen Preis, ohne Abo.
+
+Die Kampagne «Einmal reicht.» zeigt zwölf Pins für Pinterest, die Board-Struktur nach Hero, Hub und Help, SEO-Keywords, einen Content-Kalender über acht Wochen, die Zielseiten und die eingesetzten Verhaltensprinzipien.
+
+## Seiten
+
+- [Kampagne](https://xn--lve-sna.ch/): Pins, Ausgangslage, KPIs, Boards, Keywords, Kalender, Funnel, Prinzipien
+- [Prozess](https://xn--lve-sna.ch/prozess/): Stand der Pins, offene Punkte, Prompt-Log, AI-Fehler, Quellen
+
+## Hinweise
+
+- Fotos und Video sind lizenzierte Stock-Motive und zeigen keine Kundenpaare.
+- Preise und Produktangaben stammen von loveplanr.com, geprüft am 05.11.2026.

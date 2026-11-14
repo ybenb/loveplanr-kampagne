@@ -44,7 +44,7 @@ def label(p):
 def card(p):
     note = f'<p class="pin-note">{esc(p["note"])}</p>' if p.get("note") else ""
     return f"""<article class="pin {p['board'].lower()}-p">
-<a class="bild" href="assets/pins/{p['id']}.jpg" aria-label="Pin {pin_no(p)} in voller Grösse öffnen"><img src="assets/pins/{p['id']}-500.webp" width="500" height="750" loading="lazy" alt="{esc(alt(p))}"></a>
+<a class="bild" href="assets/pins/{p['id']}.jpg" aria-label="Pin {pin_no(p)} in voller Grösse öffnen"><img src="assets/pins/{p['id']}-500.webp" srcset="assets/pins/{p['id']}-300.webp 300w, assets/pins/{p['id']}-500.webp 500w" sizes="(max-width:760px) 46vw, (max-width:1200px) 23vw, 280px" width="500" height="750" loading="lazy" decoding="async" alt="{esc(alt(p))}"></a>
 <p class="pin-tag">{pin_no(p)} · {p['board']}</p>
 <h3>{esc(p['title'])}</h3>
 {label(p)}
@@ -56,7 +56,7 @@ def card(p):
 
 def reserve(p):
     return f"""<aside class="reserve">
-<a class="bild" href="assets/pins/{p['id']}.jpg" aria-label="Pin {pin_no(p)} in voller Grösse öffnen"><img src="assets/pins/{p['id']}-500.webp" width="500" height="750" loading="lazy" alt="{esc(alt(p))}"></a>
+<a class="bild" href="assets/pins/{p['id']}.jpg" aria-label="Pin {pin_no(p)} in voller Grösse öffnen"><img src="assets/pins/{p['id']}-500.webp" srcset="assets/pins/{p['id']}-300.webp 300w, assets/pins/{p['id']}-500.webp 500w" sizes="(max-width:760px) 100px, 150px" width="500" height="750" loading="lazy" decoding="async" alt="{esc(alt(p))}"></a>
 <div>
 <p class="eyebrow">Pin {pin_no(p)} · {esc(p['status'])}</p>
 <h3>{esc(p['title'])}</h3>
@@ -79,7 +79,7 @@ def mock(p):
 <div class="mock-such" aria-hidden="true">Hochzeitswebseite erstellen</div>
 <div class="mock-grid">
 <div class="mock-leer h1" aria-hidden="true">Anderer Treffer</div>
-<div class="mock-pin"><img src="assets/pins/{p['id']}-500.webp" width="500" height="750" loading="lazy" alt="{esc(alt(p))}"><p>{esc(short)}</p></div>
+<div class="mock-pin"><img src="assets/pins/{p['id']}-500.webp" srcset="assets/pins/{p['id']}-300.webp 300w, assets/pins/{p['id']}-500.webp 500w" sizes="(max-width:760px) 46vw, 260px" width="500" height="750" loading="lazy" decoding="async" alt="{esc(alt(p))}"><p>{esc(short)}</p></div>
 <div class="mock-leer h2" aria-hidden="true">Anderer Treffer</div>
 <div class="mock-leer h3" aria-hidden="true">Anderer Treffer</div>
 </div>
@@ -155,14 +155,14 @@ def prozess():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prozess: Einmal reicht. Pinterest-Kampagne für Loveplanr</title>
 <meta name="description" content="Stand der Pins, offene Punkte, Prompt-Log, AI-Fehler und Quellen der Kampagne «Einmal reicht.».">
-<meta name="robots" content="noindex">
+<link rel="canonical" href="https://xn--lve-sna.ch/prozess/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29'%3E%3Cpath fill='%23db7f74' d='M16 29S0 19 0 8.5C0 3.7 3.7 0 8.3 0 11.4 0 14.3 1.7 16 4.4 17.7 1.7 20.6 0 23.7 0 28.3 0 32 3.7 32 8.5 32 19 16 29 16 29z'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
 <header class="top">
-  <a class="mark" href="../"><img src="../assets/img/loveplanr-logo.webp" width="598" height="66" alt="Loveplanr"><span class="mark-k">Einmal reicht<span aria-hidden="true">.</span></span></a>
+  <a class="mark" href="../"><img src="../assets/img/loveplanr-logo.webp" width="398" height="44" alt="Loveplanr"><span class="mark-k">Einmal reicht<span aria-hidden="true">.</span></span></a>
   <nav aria-label="Bereiche">
     <a href="#stand">Stand der Pins</a>
     <a href="#offen">Offene Punkte</a>

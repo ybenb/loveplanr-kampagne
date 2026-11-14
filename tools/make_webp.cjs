@@ -12,4 +12,9 @@ const root = path.resolve(__dirname, '..');
       if (f !== 'hero-900.jpg') fs.unlinkSync(src);
     }
   }
+  /* Kleine Pin-Varianten für das Handy und das Raster (srcset), aus den Pins in voller Grösse */
+  for (const f of fs.readdirSync(path.join(root, 'assets/pins')).filter(n => /^\d\d-.*\.jpg$/.test(n) && !/-500\.jpg$/.test(n))) {
+    const src = path.join(root, 'assets/pins', f);
+    await sharp(src).resize({ width: 300 }).webp({ quality: 72 }).toFile(src.replace(/\.jpg$/, '-300.webp'));
+  }
 })();
